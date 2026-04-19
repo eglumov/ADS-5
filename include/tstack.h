@@ -4,7 +4,36 @@
 
 template<typename T, int size>
 class TStack {
-  // добавьте код стека
+private:
+    T data[size];
+    int topIndex;
+
+public:
+    TStack() : topIndex(-1) {}
+
+    bool isEmpty() const {
+        return topIndex == -1;
+    }
+
+    bool isFull() const {
+        return topIndex == size - 1;
+    }
+
+    void push(const T& value) {
+        data[++topIndex] = value;
+    }
+
+    void pop() {
+        --topIndex;
+    }
+
+    T& top() {
+        return data[topIndex];
+    }
+
+    const T& top() const {
+        return data[topIndex];
+    }
 };
 
-#endif  // INCLUDE_TSTACK_H_
+#endif // INCLUDE_TSTACK_H_
