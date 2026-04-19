@@ -1,7 +1,7 @@
 // Copyright 2025 NNTU-CS
-#include "tstack.h"
 #include <cctype>
 #include <string>
+#include "tstack.h"
 
 int priority(char op) {
   if (op == '+' || op == '-') return 1;
